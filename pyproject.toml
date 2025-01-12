@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "livekit-agents-chat"
+version = "0.1.0"
+description = "LiveKit Agents chat example using WebSocket"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "livekit_agents_chat", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+livekit-agents = ">=0.12.1"
+livekit-plugins-openai = ">=0.10.9"
+livekit-plugins-deepgram = ">=0.6.13"
+livekit-plugins-silero = ">=0.7.0"
+livekit-plugins-elevenlabs = ">=0.7.9"
+asyncio = "^3.4.3"
+openai = "^1.3.0"
+setuptools = "^69.0.3"  # This provides pkg_resources
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "livekit_agents_chat.main:main" 
